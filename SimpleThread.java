@@ -1,7 +1,7 @@
 import java.lang.Thread;
 
 public class SimpleThread{
-    public static void main(){
+    public static void main(String args[]){
         
         Thread t = new Thread(() -> {
             System.out.println("Hello from new thread");
