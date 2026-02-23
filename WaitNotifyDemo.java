@@ -6,7 +6,7 @@ class Message{
     boolean ready = false;
 
     public synchronized void produce(String msg) throws InterruptedException{
-        if(this.ready){
+        while(this.ready){
             wait();
         }
         this.msg = msg;
@@ -16,7 +16,7 @@ class Message{
     }
 
     public synchronized void consume() throws InterruptedException{
-        if(!this.ready){
+        while(!this.ready){
            wait();
         }
         System.out.println("Consumed:"+this.msg);
