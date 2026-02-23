@@ -22,7 +22,7 @@ class Message{
         System.out.println("Consumed:"+this.msg);
         this.msg="";
         this.ready = false;
-        notify();           // if other thread is waiting it wake sit up immendiately 
+        notify();           // if other thread is waiting it wakes it up immediately 
     }
 }
 
